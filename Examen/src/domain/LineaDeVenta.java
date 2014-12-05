@@ -1,10 +1,10 @@
 package domain;
 
-class SaleLineItem {
+class LineaDeVenta {
   private int	quantity;
-  private	ProductSpecification	productSpec;
+  private	EspecificacionDeProducto	productSpec;
 
-   public SaleLineItem(ProductSpecification spec, int quantity )
+   public LineaDeVenta(EspecificacionDeProducto spec, int quantity )
 	{
 		this.productSpec = spec;
 		this.quantity = quantity;

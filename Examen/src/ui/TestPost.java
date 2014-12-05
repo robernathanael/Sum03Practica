@@ -7,7 +7,7 @@ import workflow.*;
 class TestPost {
 	public static void main(String[] args)
 	{
-		Store tienda = new Store();
+		Tienda tienda = new Tienda();
 		POST post = tienda.getPOST();
 
 		System.out.println("Capturo 1 articulo (COD=1) de a 100 pesos");

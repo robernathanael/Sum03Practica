@@ -6,15 +6,15 @@ import org.junit.Before;
 import org.junit.Test;
 
 import workflow.POST;
-import domain.Store;
+import domain.Tienda;
 
 public class p {
-	Store t;
+	Tienda t;
 	POST p;
 	
 	@Before
 	public void setUp() throws Exception {
-		t = new Store();
+		t = new Tienda();
 		p = t.getPOST();
 	}
 	

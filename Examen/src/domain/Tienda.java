@@ -2,8 +2,8 @@ package domain;
 
 import workflow.*;
 
-public class Store {
-	private ProductCatalog productCatalog = new ProductCatalog();
+public class Tienda {
+	private CatalogosDeProducto productCatalog = new CatalogosDeProducto();
 	private POST post = new POST( productCatalog );
 
 	public POST getPOST() { return post; }

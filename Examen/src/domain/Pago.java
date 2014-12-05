@@ -1,9 +1,9 @@
 package domain;
 
-class Payment implements Monto {
+class Pago implements Monto {
   private float amount;
 
-  public Payment(float cashTendered) {
+  public Pago(float cashTendered) {
     this.amount = cashTendered;
   }
 

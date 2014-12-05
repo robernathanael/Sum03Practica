@@ -4,10 +4,10 @@ import domain.*;
 
 
 public class POST {
-	private ProductCatalog productCatalog;
-	private Sale sale;
+	private CatalogosDeProducto productCatalog;
+	private Venta sale;
 
-	public POST( ProductCatalog catalog )
+	public POST( CatalogosDeProducto catalog )
 	{
 		productCatalog = catalog;
 	}
@@ -21,9 +21,9 @@ public class POST {
 	{
 		if( isNewSale() )
 		{
-			sale = new Sale();
+			sale = new Venta();
 		}
-		ProductSpecification spec = productCatalog.specification( upc );
+		EspecificacionDeProducto spec = productCatalog.specification( upc );
 		sale.makeLineItem( spec, quantity );
 	}
 
@@ -42,7 +42,7 @@ public class POST {
           return sale.total();
         }
 
-	public Sale getSale()
+	public Venta getSale()
 	{
 		return sale;
 	}

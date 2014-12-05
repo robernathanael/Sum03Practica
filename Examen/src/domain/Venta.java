@@ -2,7 +2,7 @@ package domain;
 
 import java.util.*;
 
-public class Sale {
+public class Venta {
 	private Vector lineItems = new Vector();
 	private Date date = new Date();
 	private boolean isComplete = false;
@@ -20,9 +20,9 @@ public class Sale {
 
 	public boolean isComplete() { return isComplete; }
 
-	public void makeLineItem( ProductSpecification spec, int quantity )
+	public void makeLineItem( EspecificacionDeProducto spec, int quantity )
 	{
-		lineItems.addElement( new SaleLineItem( spec, quantity ) );
+		lineItems.addElement( new LineaDeVenta( spec, quantity ) );
 	}
 
 	public float total()
@@ -32,13 +32,13 @@ public class Sale {
 
 		while( e.hasMoreElements() )
 			{
-			total += ( (SaleLineItem) e.nextElement() ).subtotal();
+			total += ( (LineaDeVenta) e.nextElement() ).subtotal();
 			}
 		return total;
 	}
 
 	public void makePayment( float cashTendered )
 	{
-		payment = new Payment( cashTendered );
+		payment = new Pago( cashTendered );
 	}
 }

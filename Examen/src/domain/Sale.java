@@ -6,7 +6,7 @@ public class Sale {
 	private Vector lineItems = new Vector();
 	private Date date = new Date();
 	private boolean isComplete = false;
-	private Payment payment;
+	private Monto payment;
 
 	public float getBalance()
 	{

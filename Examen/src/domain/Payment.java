@@ -1,13 +1,16 @@
 package domain;
 
-class Payment {
+class Payment implements Monto {
   private float amount;
 
   public Payment(float cashTendered) {
     this.amount = cashTendered;
   }
 
-  public float getAmount() {
+  /* (non-Javadoc)
+ * @see domain.Monto#getAmount()
+ */
+public float getAmount() {
     return amount;
   }
 

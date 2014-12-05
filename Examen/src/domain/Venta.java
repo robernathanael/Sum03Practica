@@ -32,7 +32,7 @@ public class Venta {
 
 		while( e.hasMoreElements() )
 			{
-			total += ( (LineaDeVenta) e.nextElement() ).subtotal();
+			total += ((LineaDeVenta) e.nextElement()).productSpec.subtotal(( (LineaDeVenta) e.nextElement() ));
 			}
 		return total;
 	}

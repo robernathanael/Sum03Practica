@@ -15,4 +15,6 @@ public class EspecificacionDeProducto {
 	public int getUPC() { return upc;	}
 	public float getPrice() { return price; }
 	public String getDescription() { return description; }
+
+	public float subtotal(LineaDeVenta lineaDeVenta) { return lineaDeVenta.quantity * getPrice(); }
 }
